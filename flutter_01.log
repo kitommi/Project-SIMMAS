@@ -1,0 +1,84 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run -d CPH2159 --dart-define-from-file=env/dev.json
+
+## exception
+
+ProcessException: ProcessException: %1 is not a valid Win32 application (at ../../runtime/bin/process_win.cc:579)
+  Command: C:\flutter\bin\cache\dart-sdk\bin\dartaotruntime.exe C:\flutter\bin\cache\dart-sdk\bin\snapshots\frontend_server_aot.dart.snapshot --sdk-root C:\flutter\bin\cache\artifacts\engine\common\flutter_patched_sdk/ --incremental --target=flutter --experimental-emit-debug-metadata -DSUPABASE_URL=https://ctjpsaetpastnahckqsm.supabase.co -DSUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN0anBzYWV0cGFzdG5haGNrcXNtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIxNTc5NjIsImV4cCI6MjEwNzczMzk2Mn0.Pj5KLndqmSeSa1eVNm0ZJomGMrMFjUnCLWHL0iWciNw -DSHOW_DEMO_ACCOUNTS=true -DFLUTTER_BUILD_NAME=2.0.0 -DFLUTTER_BUILD_NUMBER=1 -DFLUTTER_VERSION=3.47.7 -DFLUTTER_CHANNEL=stable -DFLUTTER_GIT_URL=https://github.com/flutter/flutter.git -DFLUTTER_FRAMEWORK_REVISION=abaf9c5237 -DFLUTTER_ENGINE_REVISION=deb287481e -DFLUTTER_DART_VERSION=3.13.5 --output-dill C:\Users\HYPEAM~1\AppData\Local\Temp\flutter_tools.7f46f6b8\flutter_tool.b4a043d\app.dill --packages "C:\Users\Hype AMD\simmas\.dart_tool\package_config.json" -Ddart.vm.profile=false -Ddart.vm.product=false --enable-asserts --track-widget-creation --filesystem-scheme org-dartlang-root --initialize-from-dill build\6037ae1d339eedae8c45e513f2a515e2.cache.dill.track.dill --source file:///C:/Users/Hype%20AMD/simmas/.dart_tool/flutter_build/dart_plugin_registrant.dart --source package:flutter/src/dart_plugin_registrant.dart -Dflutter.dart_plugin_registrant=file:///C:/Users/Hype%20AMD/simmas/.dart_tool/flutter_build/dart_plugin_registrant.dart --verbosity=error --enable-experiment=alternative-invalidation-strategy
+
+```
+#0      _ProcessImpl._start (dart:io-patch/process_patch.dart:411:33)
+#1      Process.start (dart:io-patch/process_patch.dart:42:20)
+#2      LocalProcessManager.start (package:process/src/interface/local_process_manager.dart:42:22)
+#3      ErrorHandlingProcessManager.start.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:1284:26)
+#4      _run (package:flutter_tools/src/base/error_handling_io.dart:1052:22)
+#5      ErrorHandlingProcessManager.start (package:flutter_tools/src/base/error_handling_io.dart:1282:12)
+#6      DefaultResidentCompiler._compile (package:flutter_tools/src/compile.dart:1000:37)
+#7      DefaultResidentCompiler._recompile (package:flutter_tools/src/compile.dart:877:14)
+#8      _RecompileRequest._run (package:flutter_tools/src/compile.dart:451:84)
+#9      _CompilationRequest.run (package:flutter_tools/src/compile.dart:424:30)
+#10     DefaultResidentCompiler._handleCompilationRequest (package:flutter_tools/src/compile.dart:928:23)
+#11     _rootRunUnary (dart:async/zone_root.dart:48:47)
+#12     _CustomZone.runUnary (dart:async/zone.dart:816:35)
+#13     _CustomZone.runUnaryGuarded (dart:async/zone.dart:710:7)
+#14     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:381:11)
+#15     _DelayedData.perform (dart:async/stream_impl.dart:573:14)
+#16     _PendingEvents.handleNext (dart:async/stream_impl.dart:678:11)
+#17     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:649:7)
+#18     _rootRun (dart:async/zone_root.dart:27:47)
+#19     _CustomZone.run (dart:async/zone.dart:810:35)
+#20     _CustomZone.runGuarded (dart:async/zone.dart:702:7)
+#21     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:743:23)
+#22     _rootRun (dart:async/zone_root.dart:35:13)
+#23     _CustomZone.run (dart:async/zone.dart:810:35)
+#24     _CustomZone.runGuarded (dart:async/zone.dart:702:7)
+#25     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:743:23)
+#26     _microtaskLoop (dart:async/schedule_microtask.dart:40:35)
+#27     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#28     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:127:13)
+#29     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:193:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.47.7, on Microsoft Windows [Version 10.0.26200.9711], locale en-US) [591ms]
+    [32m•[39m Flutter version 3.47.7 on channel stable at C:\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision abaf9c5237 (10 days ago), 2026-10-08 09:51:21 -0700
+    [32m•[39m Engine revision deb287481e
+    [32m•[39m Dart version 3.13.5
+    [32m•[39m DevTools version 2.60.0
+    [32m•[39m Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, no-enable-windows-desktop, enable-android,
+      enable-ios, cli-animations, enable-native-assets, enable-record-use, enable-swift-package-manager,
+      omit-legacy-version-file, enable-lldb-debugging, enable-uiscene-migration
+
+[32m[✓][39m Windows Version (Windows 11 or higher, 25H2, 2009) [3.8s]
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 36.0.0) [13.7s]
+    [32m•[39m Android SDK at C:\Android\Sdk
+    [32m•[39m Emulator version unknown
+    [32m•[39m Platform android-36, build-tools 36.0.0
+    [32m•[39m Java binary at: C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin\java
+      This JDK is specified by the JAVA_HOME environment variable.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    [32m•[39m Java version OpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Chrome - develop for the web [516ms]
+    [32m•[39m Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[32m[✓][39m Connected device (3 available) [1,532ms]
+    [32m•[39m CPH2159 (mobile) • 2d3db871 • android-arm64  • Android 13 (API 33)
+    [32m•[39m Chrome (web)     • chrome   • web-javascript • Google Chrome 155.0.8059.84
+    [32m•[39m Edge (web)       • edge     • web-javascript • Microsoft Edge 155.0.4283.62
+
+[32m[✓][39m Network resources [1,327ms]
+    [32m•[39m All expected network resources are available.
+
+[32m•[39m No issues found!
+```
